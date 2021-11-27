@@ -1,0 +1,66 @@
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="numCampana">Numero de campaña</label>
+          <input
+            type="text"
+            class="form-control"
+            id="numCampana"
+            required
+            [(ngModel)]="campania.numCampana"
+            name="numCampana"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="anio">Año</label>
+          <input
+            class="form-control"
+            id="anio"
+            required
+            [(ngModel)]="campania.anio"
+            name="anio"
+          />
+        </div>
+          <div class="form-group">
+            <label for="mes">Mes</label>
+            <input
+              class="form-control"
+              id="mes"
+              required
+              [(ngModel)]="campania.mes"
+              name="mes"
+            />
+            </div>
+            <div class="form-group">
+                <label for="dia">Día</label>
+                <input
+                  class="form-control"
+                  id="dia"
+                  required
+                  [(ngModel)]="campania.dia"
+                  name="dia"
+                />
+             </div>
+             <div class="form-group">
+                <label for="nombre">Campaña</label>
+                <input
+                  class="form-control"
+                  id="nombre"
+                  required
+                  [(ngModel)]="campania.nombre"
+                  name="nombre"
+                />
+             </div>
+            
+        <button (click)="saveCampania()" class="btn btn-success">Submit</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h4>¡Usuario creado exitosamente!</h4>
+        <button class="btn btn-success" (click)="newCampania()">Agregar campaña</button>
+      </div>
+    </div>
+  </div>
+

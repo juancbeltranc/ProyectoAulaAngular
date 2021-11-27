@@ -1,0 +1,19 @@
+<div class="list row">
+    <div class="col-md-6">
+      <h4>Lista de usuarios</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let user of users; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveUser(user, i)"
+        >
+          {{ user.nombre }},{{user.cedula}}
+        </li>
+      </ul>
+  
+      <button class="m-3 btn btn-sm btn-danger" (click)="removeAllUser()">
+        Eliminar usuarios
+      </button>
+    </div>
+  </div>
